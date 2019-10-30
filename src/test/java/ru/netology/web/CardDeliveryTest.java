@@ -11,14 +11,14 @@ class CardDeliveryTest {
     void shouldTestAllFieldsCorrectly() {
         open("http://localhost:9999");
 
-        $("[data-test-id=city] input").setValue("Москва");
+        $("[data-test-id=city] input").setValue("РњРѕСЃРєРІР°");
         $("[data-test-id=date] input").setValue("02.11.2019");
-        $("[data-test-id=name] input").setValue("Иван Петров");
+        $("[data-test-id=name] input").setValue("РРІР°РЅ РџРµС‚СЂРѕРІ");
         $("[data-test-id=phone] input").setValue("+79270000000");
         $("[data-test-id=agreement]").click();
         $(".button").click();
 
-        $(withText("Успешно!")).waitUntil(visible, 15000);
+        $(withText("РЈСЃРїРµС€РЅРѕ!")).waitUntil(visible, 15000);
 
     }
 }
